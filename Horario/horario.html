@@ -1,97 +1,144 @@
 <!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset ="UTF-8">
+    <title>Horario 1º DAW</title>
+
     <style>
+    body {
+      text-align: center; 
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
     table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-</style>
+      border: 1px solid black;
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    table {
+      margin: 0 auto; 
+    }
+
+    th, td {
+      padding: 6px;
+    }
+
+    /* 💙 Color añadido */
+    th[colspan="6"] {
+      background-color: #d0e4ff; /* título */
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    th:not(:first-child),
+    th:first-child {
+      background-color: #d0e4ff; /* cabecera días */
+    }
+
+    td:first-child {
+      background-color: #d0e4ff; /* columna horas */
+      font-weight: bold;
+    }
+
+    header, footer {
+      margin-bottom: 15px;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9em;
+      border-top: 1px solid gray;
+      padding-top: 6px;
+      margin-top: 20px;
+    }
+
+    footer div {
+      width: 45%;
+    }
+    </style>
 </head>
 
 <body>
-    <table>
-        <tr>
-        <th colspan= "6">1ºDAW</th>
-        </tr>
-        <tr>
-            <th>Hora</th>
-            <th>Lunes</th>
-            <th>Martes</th>
-            <th>Miércoles</th>
-            <th>Jueves</th>
-            <th>Viernes</th>
-        </tr>  
-        <tr>
-            <td>15:15-16:15</td>
-            <td rowspan="3">BD</td>
-            <td rowspan="3">IPE</td>
-            <td>DIGIT</td>
-            <td>BD</td>
-            <td rowspan="2">SI</td>
-        </tr>
-        <tr>
-            <td>16:15-17:15</td>
-            <td></td>
-            <td></td>
-            <td>SOST</td>
-            <td rowspan="2">PROG</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>17:15-18:15</td>
-            <td></td>
-            <td></td>
-            <td rowspan="2">EDD</td>
-            <td></td>
-            <td rowspan="2">BD</td>
-        </tr>
-        <tr>
-            <td>18:30-19:30</td>
-            <td rowspan="2">PROG</td>
-            <td rowspan="3">SI</td>
-            <td></td>
-            <td rowspan="3">LM</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>19:30-20:30</td>
-            <td></td>
-            <td></td>
-            <td rowspan="2">PROG</td>
-            <td></td>
-            <td rowspan="2">PROG</td>
-        </tr>
-        <tr>
-            <td>20:30-21:30</td>
-            <td>EDD</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
 
+<header>
+    <img src="logo.png" alt="logo" width="70">
+    <h2>IES Playamar</h2>
+    <p>Desarrollo de Aplicaciones Web - 1º DAW</p>
+</header>
 
-    </table>
-    <!--Diseña una tabla para mostrar el horario del grupo, con las siguientes indicaciones:
+<table>
+    <tr>
+    <th colspan= "6">1ºDAW</th>
+    </tr>
 
-La primera fila tendrá una única celda que diga "1º DAM"  (colspan)
+    <tr>
+        <th>Hora</th>
+        <th>Lunes</th>
+        <th>Martes</th>
+        <th>Miércoles</th>
+        <th>Jueves</th>
+        <th>Viernes</th>
+    </tr>  
 
-Las celdas contiguas del mismo tipo se representarán juntas, P ej, dos horas seguidas o la hora del recreo
+    <tr>
+        <td>15:15-16:15</td>
+        <td rowspan="3" style="background-color: blue;">BD<br><small>Miguel Mañanes</small></td>
+        <td rowspan="3" style="background-color: brown;">IPE<br><small>Carlos Álvarez</small></td>
+        <td style="background-color: violet;">DIGIT<br><small>Adolfo Rueda</small></td>
+        <td style="background-color: blue;">BD<br><small>Miguel Mañanes</small></td>
+        <td rowspan="2" style="background-color: chartreuse;">SI<br><small>Alfonso Ballesteros</small></td>
+    </tr>
 
-En cada celda pondremos el módulo y el profesor o profesora que lo imparte, con diferente tipo o tamaño de fuente
+    <tr>
+        <td>16:15-17:15</td>
+        <td style="background-color: blueviolet;">SOST<br><small>Carlos Álvarez</small></td>
+        <td rowspan="2" style="background-color: darkgreen;">PROG<br><small>Francisco Pérez</small></td>
+    </tr>
 
-Usaremos distintos tipos de borde de celda
+    <tr>
+        <td>17:15-18:15</td>
+        <td style="background-color: red;">EDD<br><small>Pilar González</small></td>
+        <td style="background-color: blue;">BD<br><small>Miguel Mañanes</small></td>
+    </tr>
 
-Las celdas del mismo módulo se representarán con el mismo color de fondo
+    <tr>
+        <td>18:15-18:30</td>
+        <td colspan="5" style="font-weight:bold;">RECREO</td>
+    </tr>
 
-La página mostrará información adicional a la de la tabla, como el nombre del instituto, el logo, el ciclo formativo, curso,..
-a pie de página y a la derecha pondremos información sobre la tarea, el autor , el titulo,..
+    <tr>
+        <td>18:30-19:30</td>
+        <td rowspan="2" style="background-color: darkgreen;">PROG<br><small>Francisco Pérez</small></td>
+        <td rowspan="3" style="background-color: chartreuse;">SI<br><small>Alfonso Ballesteros</small></td>
+        <td style="background-color: red;">EDD<br><small>Pilar González</small></td>
+        <td rowspan="3" style="background-color:yellow;">LM<br><small>Adolfo Rueda</small></td>
+        <td style="background-color: blue;">BD<br><small>Miguel Mañanes</small></td>
+    </tr>
 
-Si terminamos pronto, añadid algunos estilos de tabla que mejoren la apariencia-->
+    <tr>
+        <td>19:30-20:30</td>
+        <td rowspan="2" style="background-color: darkgreen;">PROG<br><small>Francisco Pérez</small></td>
+        <td rowspan="2" style="background-color: darkgreen;">PROG<br><small>Francisco Pérez</small></td>
+    </tr>
 
+    <tr>
+        <td>20:30-21:30</td>
+        <td style="background-color: red;">EDD<br><small>Pilar González</small></td>
+    </tr>
+</table>
 
-
-
+<footer>
+    <div>
+        IES Playamar - Curso 25/26
+    </div>
+    <div>
+        Tarea Horario · Autor: Cristian González Mateo · 1º DAW
+    </div>
+</footer>
 
 </body>
+
+
