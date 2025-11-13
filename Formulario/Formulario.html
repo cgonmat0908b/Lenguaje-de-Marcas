@@ -6,57 +6,137 @@
     <title>Primer Formulario</title>
 
     <style>
+
         body{
             text-align: center;
+            border: 2px solid black;
+            background-color: white;
+            border-radius: 80px;
+        }
+
+        legend{
+            background-color:black;
+            color: white;
+            padding: 3px;
+        }
+
+        .DatosAds{
+            margin-top: 50px;
+            margin-bottom: 10px;
         }
     </style>
+
 </head>
 
 <body>
-    <h1>Formulario De Acceso</h1>
-    <br>
-    <form>
-        
-        <label for="Nombre">Introduce tu nombre</label>
-        <br>
-        <br>
-        <input type = "text"  id="Nomber" name = "Nombre" value = ""></input>
-        <br>
-        <br>
-        <label for="Mail">Introduce tu email</label>
-        <br>
-        <br>
-        <input type="email" name="Mail" id="Mail" value="abcde@xxx.xxx"></input>
-        <br>
-        <br>
-        <label for="Curso">¿En que curso quieres aplicar?</label>
-        <br>
-        <br>
-        <input type="checkbox" id="DAW" name="DAW" value="DAW">
-        <label for="DAW"> DAW</label>
-        <br>
-        <input type="checkbox" id="DAM" name="DAM" value="DAM">
-        <label for="DAM"> DAM</label>
-        <br>
-        <input type="checkbox" id="ELECTROMECÁNICA" name="ELECTROMECÁNICA" value="ELECTROMECÁNICA">
-        <label for="ELECTROMECÁNICA"> ELECTROMECÁNICA</label>
-        <br>
-        <input type="checkbox" id="INGENIERIA" name="INGENIERIA" value="INGENIERIA">
-        <label for="INGENIERIA"> INGENIERIA AERONAUTICA</label>
-        <br>
-        <br>
-        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-        <label for="vehicle1"> DAW</label>
-        <br>
-        <br>
-        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-        <label for="vehicle1"> DAW</label>
-        <br>
-        <br>
+    <header>
+        Formulario que solicita datos variados de solicitantes para una visita a una empresa
+    </header>
 
+    <h1>Formulario De Acceso</h1>
+    <h2>Los campos con * son obligatorios</h2>
+    <br>
+    <form action="PaginaRecibo.html" method="get" >  <!--Get muestra las variables y Post no las muestra-->
+
+        <fieldset class="DatosPers">
+
+            <legend>Datos Personales</legend>
+            <label for="Nombre">Introduce tu nombre*</label>
+            <br>
+            <br>
+            <input type = "text"  id="Nombre" name = "Nombre" value = "" required></input>
+            <br>
+            <br>
+        
+            <label for="Mail">Introduce tu email*</label>
+            <br>
+            <br>
+            <input type="email" name="Mail" id="Mail" value="abcde@xxx.xxx" required></input>
+            <br>
+            <br>
+            <label for="DNIFoto">Sube una fotocopia de tu DNI</label>
+            <br>
+            <input type="file" name="DNIFoto" id="DNIFoto">
+            <br>
+            <br>
+
+        </fieldset>
+
+        <fieldset class="DatosAds">
+
+            <legend>Datos Adicionales</legend>
+            <label for="NumPersonas">Número de personas del grupo</label>
+            <br>
+            <br>
+            <input type="number" id="NumGrupo" name="NumGrupo" value="" min="1" max="5"></input>
+            <br>
+            <br>
+            <label for="Horario">Indica que horario prefieres</label>
+            <br>
+            <br>
+            <input type="radio" id="Mañana" name="Mañana" value="Mañana">
+            <label for="Mañana">Mañana</label>
+            <br>
+            <input type="radio" id="Tarde" name="Tarde" value="Tarde">
+            <label for="Tarde"> Tarde</label>
+            <br>
+            <input type="radio" id="Noche" name="Noche" value="Noche">
+            <label for="Noche"> Noche</label>
+            <br>
+            <br>
+            <label for="Fecha">Fecha Prevista</label>
+            <br>
+            <input type="date" id="Fecha" name="Fecha">
+            <br>
+            <br>
+            <label for="Guia">Necesitas Guía(S/N)</label>
+            <br>
+            <input type="radio" id="Si" name="Si" value="Si">
+            <label for="Si">Si</label>
+            <br>
+            <input type="radio" id="No" name="No" value="No">
+            <label for="No">No</label>
+            <br>
+            <br>
+            <label for="Intereses">Marca los campos que te generan interes</label>
+            <br>
+            <input type="checkbox" name="A" id="A">
+            <label for="A">A</label>
+            <br>
+            <input type="checkbox" name="B" id="B">
+            <label for="B">B</label>
+            <br>
+            <input type="checkbox" name="C" id="C">
+            <label for="C">C</label>
+            <br>
+            <br>
+            <label for="Lista">¿Que prefieres?</label>
+            <br>
+            <br>
+            <select type="Lista">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <br>
+            <br>
+            <label for="Puntuacion">Puntua la página, del 1 al 10</label>
+            <br>
+            <input type="range" id="Puntuacion" name="Puntuacion" min="1" max="10">
+            <label for=""></label>
+            <br>
+            <label for="Oculto">Campo Oculto</label>
+            <input type="hidden" name="Oculto" id="Oculto">
+        </fieldset>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Reiniciar">
 
     </form>
-    
+
+    <footer>
+        <p>Información sobre la empresa</p>
+    </footer>
 </body>
 
 </html>
