@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  height: 95%;
+}
+
+section{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; 
+  background: #ccc;
+  padding: 20px;
+}
+
+
+nav{
+    height: 500px;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.article1 {
+  float: left;
+  width: 30%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: #f1f1f1;
+  height: 500px;
+  padding: 20px;
+}
+.article2 {
+  float: left;
+  width: 30%;
+  background-color: lightblue;
+  height: 500px;
+  padding: 20px;
+}
+
+
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+footer {
+  background-color: #777;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+.imagen2{
+    float: right;
+}
+.adicional{
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: red;
+    height: 500px;
+    padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+
+<header>
+  <h2>Secciones</h2>
+  <h3>Snowboarding</h3>
+  <img src="Snowboard.jpg" width="80%" height="200px">
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#explicacion">¿Qué es?</a></li>
+      <br>
+      <li><a href="#Modalidades">Modalidades</a></li>
+      <br>
+      <li><a href="#Competiciones">Proximas Competiciones</a></li>
+      <br>
+      <li><a href="#article3">Figuras Famosas</a></li>
+    </ul>
+  </nav>
+  
+  <article class="article1">
+    <h1 id="explicacion">¿Que es el snowboard?</h1>
+    <p>Es una actividad que consiste en bajar una montaña nevada o desplazarse por superficies cubiertas de nieve sobre una sola tabla, manteniendo los pies de lado (no hacia adelante como en el esquí).</p>
+
+    <h1 id="Modalidades">Modalidades</h1>
+        <p>Modalidades de snowboard Freeride: Bajar por montaña, nieve profunda espacios abiertos.</p>
+        <p>Freestyle: Saltos, trucos y barandillas en el snowpark.</p>
+        <p>Alpino / carving: Bajadas rápidas, giros limpios y marcados sobre pista dura. </p>
+        <p>Boardercross: Carreras con obstáculos compitiendo contra otros riders.</p>
+
+  </article>
+  
+  <article class="article2">
+    <h1 id="Competiciones">Proximas Competiciones</h1>
+
+    <img src="Competicion.jpg" class="imagen2" height="100px">
+    <p>Copa del Mundo FIS Snowboard 2025/26 Park & Pipe</p>
+    <p>La temporada comienza con Big Air en Secret Garden (China) el 27 de noviembre de 2025. FIES y Snowboard+2FIES y Snowboard+2Hay otras etapas previstas de Halfpipe Slopestyle y Big Air durante la temporada.</p>
+
+
+    <p>Campeonatos del Mundo FIS de Freestyle y Snowboard 2025</p>
+    <p>Calendario completo disponible según FIS. FIES y Snowboard+1 Por ejemplo, eventos de “Parallel Giant Slalom” se celebrarán en localidades como Mylin (China) los días 6-7 de diciembre de 2025.</p>
+
+    <p>Copa del Mundo FIS Snowboard Cross / Paralelo</p>
+    <p>Se celebran del 18 al 30 de marzo de 2025 en la región de Engadin (Suiza). En St. Moritz habrá pruebas de Big Air y de snowboard alpino. En Silvaplana será el slopestyle y halfpipe.</p>
+  </article>
+</section>
+
+<section>
+    <article class="adicional" id="article3">
+        <h1>Famosos Participantes</h1>
+        <br>
+        <p>Shaun White: Conocido como "The Flying Tomato", es el snowboarder más famoso del mundo, con tres medallas de oro olímpicas y 15 medallas de oro en los X Games.</p>
+        <br>
+        <p>Travis Rice: Considerado un rey del snowboard por su dominio en el freestyle, especialmente en el backcountry.</p>
+        <br>
+        <p>Terje Håkonsen: Una leyenda del snowboard, fue uno de los primeros en popularizar el deporte y ganar múltiples títulos.</p>
+        <img src="Snowboardistas.webp" width="250px" style="float: right;">
+        <img src="Snowboardistas.webp" width="250px" style="float: left;">
+        <img src="Snowboardistas.webp" width="250px">
+    </article>
+</section>
+
+<footer>
+  <p>Cristian González Mateo 20/11/2025 <img src="Licencia CC.png" height="50px" width="200px"></p>
+</footer>
+
+</body>
+</html>

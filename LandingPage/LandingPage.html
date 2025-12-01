@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Página de producto</title>
+
+<style>
+  body { margin: 0; font-family: Arial; }
+
+  /* Menú fijo arriba */
+  .menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+  }
+  .logo{
+    float: left;
+  }
+  .Inicio{
+    text-align: center;
+  }
+
+
+
+  /* Espacio para que el contenido no quede debajo del menú */
+  .spacer { height: 60px; }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    height: 800px;
+    background: #87c0ff;
+    
+  }
+
+  /* Contenido centrado con absolute */
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+  }
+
+  /* Tres cajas flotando */
+  .feature-box {
+    float: left;
+    width: 33.33%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+
+  /* Footer limpia floats */
+  footer {
+    clear: both;
+    background: #eee;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content:space-between;
+  }
+
+</style>
+
+</head>
+<body>
+
+  <div class="menu">
+    <div class="logo">
+        <img src="PC.jpg" width="50px">
+    </div>
+
+    <div class="Inicio">
+        <h2>Inicio</h2>
+    </div>
+
+    <div class="">
+
+    </div>
+  </div>
+
+  <div class="spacer"></div>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Ordenador Personal (PC)</h1>
+      <p>Haz click <a href="https://es.wikipedia.org/wiki/Computadora_personal">aquí</a> para mas información</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="feature-box">
+        <h2>¿Qué es</h2>
+        <p>Una computadora personal, computador personal u ordenador, conocida como PC (siglas en inglés de Personal Computer), es un tipo de microcomputadora diseñada en principio para ser utilizada por una sola persona. Habitualmente, la sigla PC se refiere a las computadoras IBM PC compatibles. Una computadora personal es generalmente de tamaño medio y es usada por un solo usuario (aunque hay sistemas operativos que permiten varios usuarios simultáneamente, lo que es conocido como multiusuario). Suele denominarse ordenador de sobremesa, debido a su posición estática e imposibilidad de transporte a diferencia de un ordenador portátil.</p>
+    </div>
+
+    <div class="feature-box">
+        <h2>Historia</h2>
+        <p>El primer registro que se conoce del término en inglés, personal computer es el aparecido en 1964 en la revista New Scientist, en una serie de artículos llamados «El mundo en 1984». En un artículo titulado «The Banishment of Paper Work», Arthur L. Samuel, del Centro de Investigación Watson de IBM escribió: «Aunque será completamente posible obtener una educación en casa, a través del propio computador personal, la naturaleza humana no habrá cambiado, y todavía habrá necesidad de escuelas con laboratorios, aulas y profesores que motiven a los alumnos».</p>
+    </div>
+
+    <div class="feature-box">
+        <h2>Tipos</h2>
+        <p>En informática, una estación de trabajo (del inglés workstation) es un ordenador de alto rendimiento diseñado principalmente para tareas técnicas, científicas, de ingeniería o de creación de contenido profesional. Aunque históricamente se diferenciaban de los ordenadores personales por su potencia y capacidad de expansión, hoy muchas estaciones de trabajo se basan en arquitecturas similares a PCs de gama alta, pero optimizadas para fiabilidad, rendimiento sostenido y compatibilidad con software profesional exigente, como CAD, simulación, modelado 3D, análisis de datos y edición multimedia.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p style="text-align: left;">Realizado por: Cristian González Mateo</p>
+    <p style="text-align: center;">30/11/2025</p>
+    <p style="text-align: right;"> 1ºDAW</p>
+  </footer>
+
+</body>
+</html>

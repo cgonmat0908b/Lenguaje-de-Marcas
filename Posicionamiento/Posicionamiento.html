@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamiento</title>
+
+    <style>
+        .bloque{
+            width: 30%;
+        }
+        .fijo{
+            position: fixed; top: 0; left: 0;
+            width: 60%;
+            background-color: green;
+            z-index: 999;
+        }
+        .relativo{
+            position: relative;
+            top: 50px;
+            background-color: lightblue;
+            height: 2000px;
+            
+        }
+
+        .contenedor{
+            position: relative;
+            top: 70px;
+        }
+        .debajo, .encima {
+                position: absolute;
+                width: 30%;
+                height: 160px;
+                border-radius: 6px;
+            }
+
+        .encima{
+            background-color: black;
+        }
+        .debajo{
+            background-color: blueviolet;
+            left: 10%;
+            top: 70px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="bloque">
+    <div class="fijo">
+        <a href="https://es.wikipedia.org/wiki/Wikipedia:Portada">Wikipedia</a><br>
+        <a href="https://www.google.com/?hl=es&safe=active&ssui=on&zx=1764603972699&no_sw_cr=1">Google</a><br>
+        <a href="https://www.youtube.com/?app=desktop&hl=es">Youtube</a><br>
+    </div>
+
+    <div class="relativo">
+        <p>ContenidoContenidoContenidoContenidoContenidoContenidoContenidoContenido</p><br>
+        <p>ContenidoContenidoContenidoContenidoContenidoContenidoContenido</p><br>
+        <p>ContenidoContenidoContenidoContenidoContenidoContenidoContenidoContenido</p><br>
+    </div>
+
+    <div class="contenedor">
+
+        <div class="encima">
+        </div>
+    
+        <div class="debajo">
+        </div>
+
+    </div>
+    
+
+    </div>
+</body>
+
+</html>
