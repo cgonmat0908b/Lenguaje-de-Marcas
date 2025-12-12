@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .titulo{
+            border: 10px;
+            border: solid;
+            float: center;
+            text-align: center;
+        }
+        .caja{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            border: 10px;
+            border: solid;
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-right: 50px;
+            height: 250px;   
+        }
+        .caja div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 25%;
+        }
+        .color1{
+            background-color: aqua;
+        }
+        .color2{
+            background-color: yellowgreen;
+        }
+        .color3{
+            background-color: black;
+        }
+
+        .color4{
+            background-color: red;
+        }
+
+        .color5{
+            background-color: purple;
+            flex-grow: 1;
+        }
+        .color6{
+            background-color:fuchsia;
+            flex-grow: 1;
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="titulo">
+        <h1>Juego De Cajas</h1>
+    </header>
+    <div class="caja">
+        <div class="color1">Uno &#x1F357;</div>
+        <div class="color2">Dos &#128540;</div>
+        <div class="color3">Tres &#129297;</div>
+        <div class="color4">Cuatro &#129298;</div>
+        <div class="color5">Cinco &#129299;</div>
+        <div class="color6">Seis &#129299;</div>
+    </div>
+</body>
+</html>
