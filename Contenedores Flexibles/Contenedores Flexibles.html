@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ejercicio Flexbox</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      min-height: 100vh;
+      background: #f2f2f2;
+    }
+
+    /* A) Menú lateral */
+    .sidebar {
+      width: 220px;
+      background: #0b5d6b;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar h2 {
+      padding: 16px;
+      text-align: center;
+      background: #084c57;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .menu li {
+      padding: 14px 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      cursor: pointer;
+    }
+
+    .menu li:hover {
+      background: rgba(0,0,0,0.2);
+    }
+
+    /* B) Contenido central */
+    .content {
+      flex: 1;
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .cards {
+      display: flex;
+      gap: 20px;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      min-height: 300px;
+    }
+
+    .card-header {
+      background: #000;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .card-body {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .card-footer {
+      background: #b3b3b3;
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .cards {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menú lateral -->
+  <aside class="sidebar">
+    <h2>Menú</h2>
+    <ul class="menu">
+      <li>Inicio</li>
+      <li>Trabajos</li>
+      <li>Proyectos</li>
+      <li>Servicios</li>
+      <li>Contacto</li>
+    </ul>
+  </aside>
+
+  <!-- Contenido central -->
+  <main class="content">
+    <section class="cards">
+      <div class="card">
+        <div class="card-header">Tarjeta 1</div>
+        <div class="card-body">Contenido del cuerpo de la tarjeta</div>
+        <div class="card-footer">Pie de la tarjeta</div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Tarjeta 2</div>
+        <div class="card-body">Contenido del cuerpo de la tarjeta</div>
+        <div class="card-footer">Pie de la tarjeta</div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Tarjeta 3</div>
+        <div class="card-body">Contenido del cuerpo de la tarjeta</div>
+        <div class="card-footer">Pie de la tarjeta</div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
