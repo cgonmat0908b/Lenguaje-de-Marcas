@@ -1,0 +1,100 @@
+
+body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+        background-image: url(assets/PicasoMain.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+.container {  
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 5px 5px;
+  grid-auto-flow: row;
+  height: 100vh;
+  grid-template-areas:
+    "Header Header Header Header Información Información Indice"
+    "Header Header Header Header Información Información Indice"
+    ". Obra1 Obra1 Obra2 Obra2 . Indice"
+    ". Obra1 Obra1 Obra2 Obra2 . Indice"
+    ". Obra3 Obra3 Obra4 Obra4 . Indice"
+    ". Obra3 Obra3 Obra4 Obra4 . Indice"
+    "Footer Footer Footer Footer Footer Footer Footer";
+
+}
+
+
+.Header {
+    grid-area: Header;
+    width: 100%;
+    height: 100px;
+    background-color: aqua;
+
+}
+
+.Footer {
+    grid-area: Footer;
+    height: 100px;
+    background-color: blueviolet;
+    width: 100%;
+}
+
+.Información {
+    grid-area: Información;
+    width: 100%;
+    height: 100px;
+    background-color: aqua;
+  }
+
+.Indice {
+    grid-area: Indice;
+    border: 50px;
+    background-color: yellow;
+    width: 250px;
+    height: 150vh;
+  }
+
+.Obra1 {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    grid-area: Obra1;
+    border: 5px;
+    border-color: yellow;
+    border-style: solid;
+    background-color: white;
+    width: 600px;
+  }
+
+.Obra2 {
+    grid-area: Obra2;
+    border: 5px;
+    border-color: yellow;
+    border-style: solid;
+    background-color: aqua;
+    width: 600px;
+  }
+
+.Obra3 {
+    grid-area: Obra3;
+    border: 5px;
+    border-color: yellow;
+    border-style: solid;
+    background-color: red;
+    width: 640px;
+    }
+
+.Obra4 {
+    grid-area: Obra4; 
+    border: 5px;
+    border-color: yellow;
+    border-style: solid;
+    background-color: white;
+    width: 600px;
+  }
+
+  .Obra
