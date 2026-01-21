@@ -1,0 +1,208 @@
+
+body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+        background-image: url(assets/PicasoMain.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat; /* ESTO evita que se duplique */
+        background-attachment: fixed;
+    }
+
+.container {  
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 5px 5px;
+  grid-auto-flow: row;
+  height: 100vh;
+  grid-template-areas:
+    "Header Header Header Header Información Información Indice"
+    "Header Header Header Header Información Información Indice"
+    ". Obra1 Obra1 Obra2 Obra2 . Indice"
+    ". Obra1 Obra1 Obra2 Obra2 . Indice"
+    ". Obra3 Obra3 Obra4 Obra4 . Indice"
+    ". Obra3 Obra3 Obra4 Obra4 . Indice"
+    "Footer Footer Footer Footer Footer Footer Footer";
+
+}
+
+
+.Header {
+    grid-area: Header;
+    width: 100%;
+    height: 100px;
+    background-color: aqua;
+    z-index: 99;
+
+}
+
+.Footer {
+    grid-area: Footer;
+    height: 100px;
+    background-color: blueviolet;
+    width: 100%;
+    text-align: center;
+}
+
+.Información {
+    grid-area: Información;
+    width: 100%;
+    height: 100px;
+    background-color: aqua;
+  }
+
+.Indice {
+    grid-area: Indice;
+    border: 50px;
+    background-color: yellow;
+    width: 250px;
+    height: 150vh;
+    padding: 20px;
+    border-radius: 30px;
+  }
+
+.Obra1 {
+    grid-area: Obra1;
+    border: 5px;
+    border-color: yellow;
+    border-style: solid;
+    background-color: white;
+    width: 600px;
+  }
+
+.Obra2 {
+    grid-area: Obra2;
+    border: 5px;
+    border-color: yellow;
+    border-style: solid;
+    background-color: aqua;
+    width: 600px;
+  }
+
+.Obra3 {
+    grid-area: Obra3;
+    border: 5px;
+    border-color: yellow;
+    border-style: solid;
+    background-color: red;
+    width: 600px;
+    }
+
+.Obra4 {
+    grid-area: Obra4; 
+    border: 5px;
+    border-color: yellow;
+    border-style: solid;
+    background-color: white;
+    width: 600px;
+  }
+
+  .Obra1, .Obra2, .Obra3, .Obra4{
+
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+
+  }
+
+.Contenido {
+  display: flex;
+  justify-content: space-between; /* texto izquierda, imagen derecha */
+  align-items: center;            /* centra verticalmente la imagen */
+}
+
+.Texto {
+  width: 60%;
+  text-align: left;
+}
+
+.Imagen {
+  width: 40%;
+  display: flex;
+  justify-content: center; /* centra horizontalmente dentro del lado derecho */
+}
+
+a {
+  color: blue; /* Cambia el color azul a negro (o el color que prefieras) */
+  text-decoration: none; /* Elimina el subrayado */
+}
+ul {
+  list-style-type: none; /* Quita los puntos */
+}
+
+
+.ContenedorH {
+  display: flex;
+  justify-content: space-between; /* distribuye elementos con espacio igual entre ellos */
+  align-items: center;            /* centra verticalmente */             
+  width: 100%;                     /* ocupa todo el ancho del Header */
+  height: 100%;                    /* opcional, para centrar verticalmente */
+  padding: 0 30px;
+}
+
+.Ini{
+  display: flex;
+}
+.Info{
+  display: flex;
+  padding-right: 60px;
+}
+.Contacto{
+  text-align: left;
+  padding-left: 10px;
+}
+
+/* --- CONFIGURACIÓN PARA MÓVILES --- */
+@media (max-width: 768px) {
+    
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto; 
+        grid-template-areas:
+            "Header"
+            "Información"
+            "Indice"
+            "Obra1"
+            "Obra2"
+            "Obra3"
+            "Obra4"
+            "Footer";
+        height: auto;
+    }
+
+    .Obra1, .Obra2, .Obra3, .Obra4 {
+        width: 90%; 
+        margin: 10px auto;
+    }
+
+    .Indice {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+
+    .Header, .Información, .Footer {
+        height: auto;
+        padding: 10px 0;
+    }
+
+
+    .Contenido {
+        flex-direction: column;
+    }
+
+    .Texto, .Imagen {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* --- CONFIGURACIÓN PARA ORDENADOR (Pantallas de más de 769px) --- */
+@media (min-width: 769px) {
+    .container {
+        height: 100vh;
+    }
+} 
