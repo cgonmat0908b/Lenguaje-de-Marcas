@@ -1,0 +1,167 @@
+body{
+    background-image: url(Assets/imagen1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+}
+
+.cabecera{
+    height: 10vh;
+    border-color: aqua;
+    background-color: yellow;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 7px;
+    padding-top: 5px;
+    border-style: solid;
+    border-radius: 20px;
+}
+.titulo{
+    width: 100%;
+    text-align: center;
+}
+
+h1{
+    color: red;
+}
+
+.NavHorizontal{
+    text-align: right;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+
+}
+
+main{
+    display: flex;
+}
+
+
+.columnaMain{
+    width: 70%;
+    height: 100vh;
+    background-color: blue;
+    padding: 10px;
+    border-style: solid;
+    border-radius: 20px;
+}
+
+.Contenedor1{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.entrada1{
+    height: 40%;
+    width: 40%;
+}
+
+.entrada2{
+    height: 40%;
+    width: 40%;
+}
+
+.lateral{
+    width: 30%;
+    display: flex;
+    height: 102,5%;
+    background-color: darkmagenta;
+    flex-direction: column;
+    border-style: solid;
+    border-radius: 20px;
+}
+
+.contendor2{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: right;
+    justify-content: right;
+    padding-left: 20px;
+}
+
+footer{
+    height: 10vh;
+    border-color: aqua;
+    background-color: yellow;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 7px;
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    border-style: solid;
+    border-radius: 20px;
+}
+
+.link1, .link2, .link3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+
+@media (max-width: 600px) {
+
+    .cabecera {
+        height: auto;
+        padding: 10px;
+    }
+
+    .navHorizontal {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .columnaMain {
+        width: 100%;
+        height: auto;
+    }
+
+    .lateral {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .entrada1,
+    .entrada2 {
+        width: 100%;
+    }
+
+    .entrada1 img,
+    .entrada2 img {
+        width: 100%;
+        height: auto;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .link1, .link2, .link3 {
+        justify-content: center;
+    }
+}
+
+
+
+
+
