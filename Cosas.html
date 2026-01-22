@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Landing Page</title>
+<style>
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* MENÚ FIJO */
+.top-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #eee;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* HERO */
+.hero {
+  height: 60vh;
+  background: lightblue;
+  position: relative;
+  margin-top: 70px; 
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* FEATURES */
+.features {
+  width: 100%;
+}
+
+.feature {
+  float: left;
+  width: 33.33%;
+  padding: 20px;
+  background: #ddd;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+
+/* FOOTER */
+.footer {
+  clear: both;
+  padding: 30px;
+  background: #222;
+  color: white;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+<header class="top-menu">
+  <div class="logo">LOGO</div>
+  <nav>HOLAHOLAHOLAHOLA</nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Gran titular</h1>
+    <button>Botón CTA</button>
+  </div>
+</section>
+
+<section class="features">
+  <div class="feature">Feature Box 1</div>
+  <div class="feature">Feature Box 2</div>
+  <div class="feature">Feature Box 3</div>
+</section>
+
+<footer class="footer">
+  Footer
+</footer>
+
+</body>
+</html>
