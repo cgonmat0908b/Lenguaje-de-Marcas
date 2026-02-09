@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form>
+        <p>Introduce un numero:</p>
+        <input type="number" name="Datos" id="Num1" required>
+
+        <p>Introduce un numero:</p>
+        <input type="number" name="Datos" id="Num2" required>
+
+        <button type="button" onclick="suma()">Enviar</button>
+
+    </form>
+
+    <p>El resultado de la suma es:</p>
+    <p id="resultado"></p>
+
+    <script>
+
+        function suma(){
+            const n1 = Number(document.getElementById("Num1").value);
+            const n2 = Number(document.getElementById("Num2").value);
+            
+            let operacion = n1 + n2;
+
+            document.getElementById("resultado").innerHTML = operacion;
+        }
+
+    </script>
+    
+</body>
+
+</html>

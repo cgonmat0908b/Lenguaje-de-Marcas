@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo">Hola Mundo</h1>
+
+    <p id= "sumas"></p>
+
+    <script>
+
+        document.getElementById("titulo").innerHTML = "¡Hola desde JS!";
+
+
+        // Usos de consola
+
+        console.log("Esto es un mensaje normal");
+
+        console.warn("Cuidado, advertencia");
+
+        console.error("Error");
+
+        // Mostrar variables
+
+        let nombre = "carlos";
+        let edad = 25;
+
+        console.log("Usuario: ", nombre, "Edad: ", edad);
+
+        alert("codigo terminado");
+        // Suma
+        let numero1 = 54;
+        let numero2 = 34;
+        let suma = numero1 + numero2;
+
+        // Guardar suma en variable String
+        texto = "La suma es: " + suma;
+
+        console.log("La suma de ", numero1, " + ", numero2, " es ", suma); 
+
+
+        document.getElementById("sumas").innerHTML = texto;
+        
+
+    </script>
+
+    <form>
+        <p>Introduce un numero:</p>
+        <input type="number" name="Datos" id="Num1">
+
+        <p>Introduce un numero:</p>
+        <input type="number" name="Datos" id="Num2">
+
+        <button type="submit" onclick="document.getElementById()">Enviar</button>
+
+    </form>
+
+    <script>
+        let sumar = document.getElementById("Num1").value +  document.getElementById("Num2").value;
+        texxto = "La suma es: " + sumar
+
+        document.getElementById("resultado").innerHTML = texxto;
+
+    </script>
+
+    <p id="resultado"></p>
+
+</body>
+</html>
