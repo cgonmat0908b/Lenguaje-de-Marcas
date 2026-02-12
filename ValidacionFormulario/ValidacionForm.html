@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de formularios</title>
+
+</head>
+
+<body>
+
+    <p>Introduce el código(1-500)</p>
+    <input type="number" name="codigo" id="cod" required placeholder="500" min="1" max="500">
+    <button type="button" onclick="validarCod()">Validar Código</button>
+    <p id="resultadoCodigo"></p>
+
+    <p>Introduce tu nombre</p>
+    <input type="text" name="nombre" id="nom" required placeholder="Cristian" min="6" max="50">
+    <button type="button" onclick="valirdarNom()">Validar Nombre</button>
+    <p id="resultadoNom"></p>
+
+    <p>Introduce tu numero de telefono</p>
+    <input type="text" name="tlf" id="tlf" required placeholder="123456789">
+    <button type="button" onclick="validarTLF()"></button>
+    <p id="resultadoTLF"></p>
+    
+
+    <p>Introduce tu dni:</p>
+    <input type="text" id="DNI" required>
+    <button type="button" onclick="comprobarDNI()">Es correcto?</button>
+    <p id = "resultadoDNI"></p>
+    
+
+    <script src="VariedadScripts.js"></script>
+    <script src="Scripts.js"></script>
+</body>
+</html>
