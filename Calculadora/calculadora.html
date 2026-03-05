@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Calculadora de Consumo Energético</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f2f2f2;
+    display:flex;
+    justify-content:center;
+    margin-top:40px;
+}
+
+.container{
+    background:white;
+    padding:30px;
+    width:400px;
+    border-radius:12px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    position:relative;
+}
+
+h2{
+    text-align:center;
+}
+
+input{
+    width:100%;
+    padding:8px;
+    margin:8px 0;
+    border-radius:6px;
+    border:1px solid #ccc;
+}
+
+label{
+    font-weight:bold;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    margin-top:15px;
+    border:none;
+    border-radius:8px;
+    background:#007bff;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0056b3;
+}
+
+/* Botón de ayuda */
+.help-btn{
+    position:absolute;
+    right:10px;
+    top:10px;
+    background:#28a745;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* Texto de ayuda */
+.help-text{
+    position:absolute;
+    right:60px;
+    top:10px;
+    background:white;
+    border:1px solid #ccc;
+    padding:10px;
+    width:220px;
+    display:none;
+    border-radius:8px;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Calculadora de Consumo Energético</h2>
+
+<div class="help-btn" 
+onmouseover="mostrarAyuda()" 
+onmouseout="ocultarAyuda()">?</div>
+
+<div class="help-text" id="helpText">
+Esta aplicación calcula el consumo eléctrico de un dispositivo.<br><br>
+Introduce los vatios del aparato, las horas diarias de uso y los días de uso.<br>
+También puedes indicar el precio del kWh para calcular el costo total.
+</div>
+
+<label>Nombre del dispositivo</label>
+<input type="text" id="nombre">
+
+<label>Vatios (W)</label>
+<input type="number" id="vatios">
+
+<label>Horas diarias (h)</label>
+<input type="number" id="horas">
+
+<label>Días</label>
+<input type="number" id="dias">
+
+<label>Total kWh</label>
+<input type="text" id="kwh" readonly>
+
+<label>Precio kWh (€)</label>
+<input type="number" id="precio">
+
+<label>Total (€)</label>
+<input type="text" id="total" readonly>
+
+<button onclick="calcular()">Calcular</button>
+<button onclick="registrar()">Registrar cálculo</button>
+
+</div>
+
+<script>
+function calcular(){
+    let w = parseFloat(document.getElementById("vatios").value) || 0;
+    let h = parseFloat(document.getElementById("horas").value) || 0;
+    let d = parseFloat(document.getElementById("dias").value) || 0;
+    let precio = parseFloat(document.getElementById("precio").value) || 0;
+
+    // kWh = (W × horas × días) / 1000
+    let kwh = (w * h * d) / 1000;
+    let total = kwh * precio;
+
+    document.getElementById("kwh").value = kwh.toFixed(2);
+    document.getElementById("total").value = total.toFixed(2);
+}
+
+function registrar(){
+    let nombre = document.getElementById("nombre").value;
+    let horas = document.getElementById("horas").value;
+    let dias = document.getElementById("dias").value;
+    let total = document.getElementById("total").value;
+
+    console.log(`${nombre}, ${horas} horas ${dias} días = ${total} €`);
+}
+
+function mostrarAyuda(){
+    document.getElementById("helpText").style.display = "block";
+}
+
+function ocultarAyuda(){
+    document.getElementById("helpText").style.display = "none";
+}
+
+// Calcular automáticamente cuando se escriba
+document.querySelectorAll("input").forEach(input=>{
+    input.addEventListener("input", calcular);
+});
+</script>
+
+</body>
+</html>
