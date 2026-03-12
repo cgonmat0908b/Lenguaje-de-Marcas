@@ -1,0 +1,26 @@
+body{
+    text-align: center;
+}
+
+#barra-fuerza{
+    border: 2px solid black;
+    height: 20px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#enviar{
+    background-color: grey;
+}
+
+#terms{
+    border: 2px solid black;
+    height: 50px;
+    width: 20%;
+    margin: 0 auto;
+    display: none;
+}
+
+#resumidos{
+    display: none;
+}

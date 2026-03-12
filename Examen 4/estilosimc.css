@@ -1,0 +1,21 @@
+body{
+    text-align: center;
+}
+
+#calculadora{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center;
+    border-radius: 10px;
+    width: 500px;
+    border: 2px solid black;
+    margin: 0 auto;
+}
+
+#cajaResult{
+    border-radius: 20px;
+    width: 300px;
+    border: 2px solid black;
+    margin: 0 auto;
+}
