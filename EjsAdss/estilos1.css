@@ -1,0 +1,48 @@
+body{
+    text-align: center;
+}
+
+#semaforo{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center;
+    border-radius: 10px;
+    width: 150px;
+    border: 2px solid black;
+    margin: 0 auto;
+}
+
+#amarillo{
+width:80px;
+height:80px;
+border-radius:50%;
+margin:10px;
+background:yellow;
+}
+
+#rojo{
+width:80px;
+height:80px;
+border-radius:50%;
+margin:10px;
+background:red;
+
+}
+
+#verde{
+width:80px;
+height:80px;
+border-radius:50%;
+margin:10px;
+background: green;
+}
+
+#boton{
+    margin-top: 50px;
+}
+
+#colores{
+    width: 150px;
+    height: 40px;
+}

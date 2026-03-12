@@ -47,8 +47,8 @@ function aparecer(){
     let objeto2 = document.getElementById("i4");
 
     barra.style.display = "flex";
-    objeto1.style.display = "";
-    objeto2.style.display = "";
+    objeto1.style.display = "inline";
+    objeto2.style.display = "inline";
 
 }
 
